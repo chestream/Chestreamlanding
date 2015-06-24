@@ -7,10 +7,14 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-
+	<!-- 
+	<link rel="stylesheet" href="css/video_bk.css">
+	 -->
+	<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bigvideo.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
-	<title>LearnHut.com</title>
+	<title>Chestream.com</title>
 </head>
 <body>
 	<header class="cd-header">
@@ -20,20 +24,35 @@
 		<div id="cd-action"><a href="https://play.google.com/store/apps/details?id=com.sauravtom.orchin" class="btn">Download App</a></div>
 	</header>
 
+	<!-- <div class="homepage-hero-module">
+	    <div class="video-container">
+	        <div class="filter"></div>
+	        <video autoplay loop class="fillWidth">
+	            <source src="video/people.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+	            <source src="video/people.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+	        </video>
+	        <div class="poster hidden">
+	            <img src="img/people.jpg" alt="">
+	        </div>
+	    </div>
+	</div>
+ -->
 	<main class="cd-main-content">
 		<div class="cd-product-intro">
-			<h1>LearnHut.com</h1>
-			<p>Learning made Open,fun and accessible to all.</p>
+			<div id='intro'>
+				<h1>Chestream.com</h1>
+				<p>Video Streaming is about to change forever.</p>
 
-			<p>Click on the "Learn More" button to see the animated tour.</p>
-			<div class="cd-triggers">
-				<a href="https://play.google.com/store/apps/details?id=com.tosc.studddin" class="btn">Download</a>
-				<a href="#cd-product-tour" class="btn salmon" data-type="cd-tour">Learn More</a>
+				<p>Click on the "Learn More" button to see the animated tour.</p>
+				<div class="cd-triggers">
+					<a href="https://play.google.com/store/apps/details?id=com.tosc.studddin" class="btn">Download</a>
+					<a href="#cd-product-tour" class="btn salmon" data-type="cd-tour">Learn More</a>
+				</div>
+				<br><br><br><!-- 
+				<a href="">
+					<p class="continue">Continue to Website</p>
+				</a> -->
 			</div>
-			<br><br><br>
-			<a href="">
-				<p class="continue">Continue to Website</p>
-			</a>
 		</div> <!-- cd-product-intro -->
 
 
@@ -99,5 +118,28 @@
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="http://vjs.zencdn.net/4.12/video.js"></script>
+<script src="js/bigvideo.js"></script>
+<!-- 
+<script src="js/video_bk.js"></script>
+ -->
+
+<script type="text/javascript">
+		
+	$( document ).ready(function() {
+		$(function() {
+		    var BV = new $.BigVideo({useFlashForFirefox:false});
+			BV.init();
+		    BV.show([
+		        { type: "video/mp4",  src: "video/people.mp4" },
+		        { type: "video/webm", src: "video/people.webm" }
+		    ]);
+		});
+
+	});
+		
+
+</script>
+
 </body>
 </html>

@@ -40,7 +40,8 @@ body:before {
   z-index: -1;
   
   display: block;
-  background-image: url("https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af");
+  //background-image: url("https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af");
+  background-image: url("http://i.imgur.com/sydKo.jpg")
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -218,6 +219,18 @@ html, body {
   padding: 50px 5%;
   text-align: center;
 }
+
+#intro{
+  //background-color: rgba(201, 229, 61, 0.31);
+  background-color: rgba(0, 107, 248, 0.43);
+  //background: blue;
+  //border:1px dotted;
+  width:450px;
+  padding:10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .cd-product-intro h1 {
   margin-bottom: 10px;
   font-weight: 100;
