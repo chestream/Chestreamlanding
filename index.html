@@ -16,15 +16,19 @@
   	
 	<title>Chestream.com</title>
 </head>
+
 <body>
+
 	<header class="cd-header">
 		<a href="/">
 			<div id="cd-logo"><img src="img/logo.png" alt="Logo" style="height:60px,width:60px"></div>
 		</a>		
-		<div id="cd-action"><a href="https://play.google.com/store/apps/details?id=com.sauravtom.orchin" class="btn">Download App</a></div>
+		<!-- 
+			<div id="cd-action"><a href="https://play.google.com/store/apps/details?id=com.sauravtom.orchin" class="btn">Download App</a></div>
+	 	-->
 	</header>
 
-	<!-- <div class="homepage-hero-module">
+<!-- <div class="homepage-hero-module">
 	    <div class="video-container">
 	        <div class="filter"></div>
 	        <video autoplay loop class="fillWidth">
@@ -36,19 +40,25 @@
 	        </div>
 	    </div>
 	</div>
- -->
+-->
+
 	<main class="cd-main-content">
 		<div class="cd-product-intro">
 			<div id='intro'>
 				<h1>Chestream.com</h1>
 				<p>Video Streaming is about to change forever.</p>
-
-				<p>Click on the "Learn More" button to see the animated tour.</p>
+				
+				<a href="#">
+					<img src="img/comingsoon.png" width="200px">
+				</a>
+				
+				<br><br><br>
+				
 				<div class="cd-triggers">
-					<a href="https://play.google.com/store/apps/details?id=com.tosc.studddin" class="btn">Download</a>
 					<a href="#cd-product-tour" class="btn salmon" data-type="cd-tour">Learn More</a>
 				</div>
-				<br><br><br><!-- 
+
+				<!-- 
 				<a href="">
 					<p class="continue">Continue to Website</p>
 				</a> -->
@@ -60,8 +70,8 @@
 			<ul>
 				<li class="cd-single-item cd-active">
 					<div class="cd-caption">
-						<h2>Discover interesting Students,Notes,Events in and around your place</h2>
-						<p>Connect with interesting students locally.Social Study made possible !!</p>
+						<h2>Chestream is a social network based around live streaming.</h2>
+						<p>If you have something to say, stream it.</p>
 					</div>
 					<div class="cd-image-container">
 						<div>
@@ -76,8 +86,8 @@
 				
 				<li class="cd-single-item cd-not-visible cd-move-right">
 					<div class="cd-caption">
-						<h2>Academic Search Engine</h2>
-						<p> Search the academic internet, in your own local language. </p>
+						<h2>A streaming app that works on all networks, even 3G.</h2>
+						<p> Post and view comments on live streams. </p>
 					</div>
 					<div class="cd-image-container">
 						<div>
@@ -90,8 +100,8 @@
 				</li>
 				<li class="cd-single-item cd-not-visible cd-move-right">
 					<div class="cd-caption">
-						<h2>GyanDaan</h2>
-						<p>Donate old books,bags and other accessories, to other people using the app. Share for Karma.</p>
+						<h2>Upvote the streams you like.</h2>
+						<p>Only the most top voted streams get played, in descending order of upvotes.</p>
 						<a href="">
 							<p class="continue">Continue to Website</p>
 						</a>
@@ -128,7 +138,10 @@
 		
 	$( document ).ready(function() {
 		$(function() {
-		    var BV = new $.BigVideo({useFlashForFirefox:false});
+		    var BV = new $.BigVideo({
+		    	useFlashForFirefox:false,
+		    	doLoop:true
+		    });
 			BV.init();
 		    BV.show([
 		        { type: "video/mp4",  src: "video/people.mp4" },

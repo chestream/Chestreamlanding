@@ -1,8 +1,7 @@
 /* -------------------------------- 
-
 Primary style
-
 -------------------------------- */
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -206,6 +205,7 @@ html, body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
 @media only screen and (min-width: 1070px) {
   .cd-main-content {
     position: relative;
@@ -222,13 +222,19 @@ html, body {
 
 #intro{
   //background-color: rgba(201, 229, 61, 0.31);
-  background-color: rgba(0, 107, 248, 0.43);
+  background-color: rgba(7, 39, 80, 0.79);
   //background: blue;
   //border:1px dotted;
   width:450px;
   padding:10px;
   border-radius: 10px;
   text-align: center;
+}
+
+.cd-caption{
+  background-color: rgba(7, 39, 80, 0.79);
+  padding:20px;
+  border-radius: 10px;
 }
 
 .cd-product-intro h1 {
