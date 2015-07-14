@@ -8,15 +8,16 @@
 	<meta name="description" content="Chestream.com | The next big social network around psuedo live videos.">
 	<meta name="keywords" content="meerkat, periscope, live streaming war, live streaming,streaming,video streaming, live video streaming, meerkat vs periscope, periscope vs meerkat, twitter and periscope, twitter, social network" >
 
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<!-- 
 	<link rel="stylesheet" href="css/video_bk.css">
 	 -->
-	<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/bigvideo.css">
+	<!-- <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bigvideo.css"> -->
 	<link rel="stylesheet" href="css/avgrund.css">
+	<link rel="stylesheet" href="css/hint.min.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Chestream.com</title>
@@ -78,20 +79,30 @@
 				<h1>Chestream.com</h1>
 				<p>Video Streaming is about to change forever.</p>
 				
-				<a href="#">
+				<a href="#" data-hint="Coming soon on play store" class="hint--right">
 					<img src="img/comingsoon.png" width="190px">
 				</a>
 				
 				<br><br><br>
 
-				<div class="cd-triggers">
-					<div class="subscribe">
-
-					</div>
-					<a href="#" class="btn" id="subscribe">Subscribe</a>
-					<a href="#cd-product-tour" class="btn salmon" data-type="cd-tour">Learn More</a>
+				<div class="social">
+					<a target="_blank" href="http://fb.com/chestreamapp">
+						<img src="img/ficon.png">
+					</a>
+					<a target="_blank" href="http://twitter.com/chestreamapp">
+						<img src="img/ticon.png">
+					</a>
+					<a target="_blank" href="https://medium.com/@chestreamapp">
+						<img src="img/micon.png">
+					</a>
 				</div>
+				<br><br>
+				<div class="cd-triggers">
+					<a href="#" class="btn" id="subscribe">Subscribe</a>
+					<a href="#cd-product-tour" data-hint="Learn More" class="btn salmon hint--right" data-type="cd-tour">Aur Dikhao</a>
 
+				</div>
+				<br>
 				<!-- 
 				<a href="">
 					<p class="continue">Continue to Website</p>
@@ -104,8 +115,8 @@
 			<ul>
 				<li class="cd-single-item cd-active">
 					<div class="cd-caption">
-						<h2>Chestream is a social network based around live streaming.</h2>
-						<p>If you have something to say, stream it.</p>
+						<h2>Chestream is a social network based around video streaming.</h2>
+						<p>If you have something to say, you can stream it. Videos get deleted once they are streamed.</p>
 					</div>
 					<div class="cd-image-container">
 						<div>
@@ -136,9 +147,14 @@
 					<div class="cd-caption">
 						<h2>Upvote the streams you like.</h2>
 						<p>Only the most top voted streams get played, in descending order of upvotes.</p>
-						<a href="">
+						<a class="twitter-share-button"
+						  href="https://twitter.com/intent/tweet?text=Check out chestream.com via @chestreamapp"
+						  data-size="large">
+						Tweet</a>
+						<br>
+						<!-- <a href="">
 							<p class="continue">Continue to Website</p>
-						</a>
+						</a> -->
 					</div>
 					<div class="cd-image-container">
 						<div>
@@ -162,29 +178,40 @@
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="http://vjs.zencdn.net/4.12/video.js"></script>
-<script src="js/bigvideo.js"></script>
+<!-- <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+<script src="js/bigvideo.js"></script> -->
 <script src="js/jquery.avgrund.min.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 <!-- 
 <script src="js/video_bk.js"></script>
  -->
 
 <script type="text/javascript">
 		
-	$( document ).ready(function() {
-		$(function() {
-		    var BV = new $.BigVideo({
-		    	useFlashForFirefox:false,
-		    	doLoop:true
-		    });
-			BV.init();
-		    BV.show([
-		        { type: "video/mp4",  src: "video/people.mp4" },
-		        { type: "video/webm", src: "video/people.webm" }
-		    ]);
-		});
+	// $( document ).ready(function() {
+	// 	$(function() {
+	// 	    var BV = new $.BigVideo({
+	// 	    	useFlashForFirefox:false,
+	// 	    	doLoop:true
+	// 	    });
+	// 		BV.init();
+	// 	    BV.show([
+	// 	        { type: "video/mp4",  src: "video/people.mp4" },
+	// 	        { type: "video/webm", src: "video/people.webm" }
+	// 	    ]);
+	// 	});
 
-	});
+	// });
+
+	$.backstretch([
+	      "https://static.pexels.com/photos/5156/people-eiffel-tower-lights-night.jpg",
+	      "https://static.pexels.com/photos/2850/people-party-dancing-music.jpg",
+	      "https://static.pexels.com/photos/6638/people-crowd-child-kid.jpg",
+	      "https://static.pexels.com/photos/4968/person-hands-woman-smartphone.jpg",
+	      "https://static.pexels.com/photos/3086/people-hand-iphone-smartphone.jpg",
+	      "https://static.pexels.com/photos/849/people-festival-party-dancing.jpg",
+	      "https://static.pexels.com/photos/1714/city-people-woman-street.jpg"
+	  ], {duration: 1000, fade: 2050});
 
 	$('#subscribe').avgrund({
 	    width: 360, // max is 640px
@@ -204,6 +231,23 @@
 		
 
 </script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
 </body>
 </html>
