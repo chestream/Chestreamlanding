@@ -79,7 +79,11 @@
 
 	<header class="cd-header">
 		<a href="/">
-			<div id="cd-logo"><img src="img/logo.png" alt="Logo" style="height:60px,width:60px"></div>
+			<div id="cd-logo">
+				<a href="https://play.google.com/store/apps/details?id=com.chestream">
+					<img src="img/logo.png" alt="Logo" style="height:60px,width:60px">
+				</a>
+			</div>
 		</a>		
 		<!-- 
 			<div id="cd-action"><a href="https://play.google.com/store/apps/details?id=com.sauravtom.orchin" class="btn">Download App</a></div>
@@ -106,8 +110,9 @@
 				<h1>⍟ Chestream ⍟</h1>
 				<p style="font-weight:bold;">A new social network around video streaming that you'll fall in love with.</p>
 				
-				<a href="#" data-hint="Coming soon on play store" class="hint--right">
-					<img src="img/comingsoon.png" width="190px">
+				<a href="https://play.google.com/store/apps/details?id=com.chestream" target="_blank">
+				  <img alt="Android app on Google Play"
+				       src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" width="190px"/>
 				</a>
 				
 				<br><br><br>
@@ -246,15 +251,14 @@
 
 	// });
 
-	$.backstretch([
-	      "https://static.pexels.com/photos/5156/people-eiffel-tower-lights-night.jpg",
-	      "https://static.pexels.com/photos/2850/people-party-dancing-music.jpg",
-	      "https://static.pexels.com/photos/6638/people-crowd-child-kid.jpg",
-	      "https://static.pexels.com/photos/4968/person-hands-woman-smartphone.jpg",
-	      "https://static.pexels.com/photos/3086/people-hand-iphone-smartphone.jpg",
-	      "https://static.pexels.com/photos/849/people-festival-party-dancing.jpg",
-	      "https://static.pexels.com/photos/1714/city-people-woman-street.jpg"
+	$('body').backstretch([
+	      "https://static.pexels.com/photos/5156/people-eiffel-tower-lights-night.jpg"
 	  ], {duration: 4000, fade: 2050});
+
+	var instance = $('body').data('backstretch');
+	// Then, you can manipulate the images array directly
+	instance.images.push("https://static.pexels.com/photos/1714/city-people-woman-street.jpg");
+	instance.images.push("https://static.pexels.com/photos/3086/people-hand-iphone-smartphone.jpg");
 
 	$('#subscribe').avgrund({
 	    width: 360, // max is 640px
